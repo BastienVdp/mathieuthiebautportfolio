@@ -238,7 +238,6 @@
           img {
             width: 100%;
             @include media(">laptop") {
-              width: 469px;
               object-fit: cover;
             }
           }
