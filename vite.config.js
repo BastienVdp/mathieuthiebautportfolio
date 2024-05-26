@@ -4,7 +4,7 @@ import { glob } from "glob";
 export default {
   root: path.join(__dirname, "src"),
   build: {
-    outDir: path.join(__dirname, "dist"),
+    outDir: path.join(__dirname, "src"),
     rollupOptions: {
       input: {
         index: resolve(__dirname, "src/index.html"),
