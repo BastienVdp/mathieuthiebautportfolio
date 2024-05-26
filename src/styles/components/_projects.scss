@@ -1,0 +1,78 @@
+.projects {
+  margin-bottom: 84px;
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include media(">laptop") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      border-bottom: 1px solid $clr-border;
+      padding: 84px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      text-decoration: none;
+
+      &:nth-child(even) {
+        border-left: unset;
+      }
+
+      @include media(">laptop") {
+        border-left: 1px solid $clr-border;
+        &:nth-child(odd) {
+          border-left: unset;
+        }
+        &:nth-child(even) {
+          border-left: 1px solid $clr-border;
+        }
+        &:last-child {
+          border-bottom: unset;
+        }
+        &:nth-last-of-type(2) {
+          border-bottom: unset;
+        }
+      }
+
+      img {
+        max-width: 100%;
+        align-self: flex-end;
+        @include media(">phone") {
+          margin-left: unset;
+          width: 75%;
+          max-width: 880px;
+        }
+      }
+
+      &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        h3 {
+          font-size: 24px;
+          font-weight: 900;
+          color: $clr-title;
+
+          @include media(">phone") {
+            font-size: 32px;
+          }
+        }
+
+        p {
+          font-size: 18px;
+          font-weight: 400;
+          color: $clr-body;
+        }
+
+        a {
+          font-size: 18px;
+          font-weight: 600;
+          color: $clr-black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
