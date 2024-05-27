@@ -153,6 +153,10 @@
 
       &.three-cols {
         grid-template-columns: repeat(3, minmax(300px, 1fr));
+
+        @include media("<1000px") {
+          grid-template-columns: 1fr;
+        }
       }
 
       &.one-col {
