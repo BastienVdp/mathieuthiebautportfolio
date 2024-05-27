@@ -1,8 +1,8 @@
 section.hero {
   padding: 10vh 24px 100vw 24px;
 
-  @include media(">phone") {
-    padding: 132px;
+  @include media(">laptop") {
+    padding: 132px !important;
     min-height: 70vh;
   }
 
