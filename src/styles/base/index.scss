@@ -1,0 +1,51 @@
+@import "reset";
+@import "fonts";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $ff-body;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: $clr-black;
+  background-color: $clr-background;
+  overflow-x: hidden;
+
+  --navbar-height: 64px;
+
+  @include media(">phone") {
+    --navbar-height: 80px;
+  }
+
+  @include media(">laptop") {
+    --navbar-height: 96px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $ff-heading;
+  font-weight: 600;
+  margin: 0;
+}
+
+.wrapper {
+  @include media(">phone") {
+    display: grid;
+    grid-template-columns: 12vw 1fr;
+  }
+
+  .container {
+    @include media(">phone") {
+      padding: 0;
+    }
+  }
+}
